@@ -7,6 +7,8 @@ import {
   Validators
 } from '@angular/forms';
 import { DataService } from './data.service';
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
+
 
 @Component({
   selector: 'app-root',
@@ -20,7 +22,8 @@ export class AppComponent {
 
   constructor(
   	private formBuilder : FormBuilder,
-  	private dataService:DataService
+  	private dataService:DataService,
+  	private spinnerService: Ng4LoadingSpinnerService
   ){}
 
   ngOnInit() {
@@ -32,8 +35,10 @@ export class AppComponent {
 
 	resultedJson:any;
   onChange(event){
+    this.spinnerService.show();
   	this.dataService.getData().subscribe((data)=>{
   		this.resultedJson = data;
+      this.spinnerService.hide();
   	})
   }
 }

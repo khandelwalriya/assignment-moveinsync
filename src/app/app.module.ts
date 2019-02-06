@@ -5,6 +5,7 @@ import { MatDatepickerModule,MatInputModule,MatNativeDateModule,MatSliderModule 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     MatSliderModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng4LoadingSpinnerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
