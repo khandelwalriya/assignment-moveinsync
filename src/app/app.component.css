@@ -1,3 +1,10 @@
 mat-slider{
 	width: 70%;
 }
+thead{
+	background: #5f9ea0;
+	color: #fff;
+}
+thead th {
+	font-weight: normal;
+}
