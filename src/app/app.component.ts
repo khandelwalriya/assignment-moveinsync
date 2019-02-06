@@ -30,10 +30,9 @@ export class AppComponent {
 		});
 	}
 
-	resultedJson:any=[];
+	resultedJson:any;
   onChange(event){
   	this.dataService.getData().subscribe((data)=>{
-  		console.log(data);
   		this.resultedJson = data;
   	})
   }
